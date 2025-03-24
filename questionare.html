@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionnaire</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container mt-5"></div>
+        <div id="page-1" class="questionnaire-page">
+            <h1>Welcome to the Questionnaire</h1>
+            <p>Please take a few moments to complete this questionnaire. Your input is valuable to us.</p>
+            <button class="btn btn-primary" onclick="showPage(2)">Start</button>
+        </div>
+
+        <div id="page-2" class="questionnaire-page d-none">
+            <h2>Personal Information</h2>
+            <form>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                </div>
+                <div class="mb-3">
+                    <label for="age" class="form-label">Age</label>
+                    <input type="number" class="form-control" id="age" placeholder="Enter your age">
+                </div>
+                <button class="btn btn-primary" type="button" onclick="showPage(3)">Next</button>
+            </form>
+        </div>
+
+        <div id="page-3" class="questionnaire-page d-none">
+            <h2>Additional Information</h2>
+            <form>
+                <div class="mb-3">
+                    <label for="dropdown1" class="form-label">Select an option</label>
+                    <select class="form-select" id="dropdown1">
+                        <option value="" selected disabled>Choose...</option>
+                        <option value="option1">Option 1</option>
+                        <option value="option2">Option 2</option>
+                        <option value="option3">Option 3</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="textbox1" class="form-label">Additional Comments</label>
+                    <textarea class="form-control" id="textbox1" rows="3" placeholder="Enter your comments"></textarea>
+                </div>
+                <button class="btn btn-primary" type="button" onclick="showPage(4)">Next</button>
+            </form>
+        </div>
+
+        <div id="page-4" class="questionnaire-page d-none">
+            <h2>Submit</h2>
+            <p>Thank you for completing the questionnaire. Please click the button below to submit your responses.</p>
+            <button class="btn btn-success" onclick="submitForm()">Submit</button>
+        </div>
+    </div>
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="questionare.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

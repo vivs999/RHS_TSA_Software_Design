@@ -1,4 +1,4 @@
-.row{
+.row {
     margin-top: 50px;
     margin-bottom: 50px;
 }
@@ -13,7 +13,11 @@
 body {
     background-color: #f0f0f0;
     color: #333;
-    font-family: Arial, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.col{
+    color:#2E8B57;
 }
 
 header {
@@ -24,7 +28,7 @@ header {
 }
 
 nav {
-    background-color: #333;
+    background-color: black;
     color: white;
     padding: 10px;
     text-align: center;
@@ -41,7 +45,7 @@ nav a:hover {
 }
 
 .card {
-    background-color: #fff;
+    background-color: black;
     border: 1px solid #ddd;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -69,8 +73,29 @@ footer {
     width: 100%;
     bottom: 0;
 }
-h1, h2, h3, h4, h5, h6 {
-    color: #4CAF50;
+
+h1 {
+    color: #2E8B57; /* Changed to a darker green for better contrast */
+}
+
+h2 {
+    color: #2E8B57; /* Changed to a darker green for better contrast */
+}
+
+h3 {
+    color: #2E8B57; /* Changed to a darker green for better contrast */
+}
+
+h4 {
+    color: #2E8B57; /* Changed to a darker green for better contrast */
+}
+
+h5 {
+    color: #2E8B57; /* Changed to a darker green for better contrast */
+}
+
+h6 {
+    color: #2E8B57; /* Changed to a darker green for better contrast */
 }
 
 p {
@@ -119,4 +144,15 @@ button:hover {
 
 .table tr:hover {
     background-color: #ddd;
+}
+
+.gradient-overlay {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.05), rgba(23, 23, 23, 1));
+    pointer-events: none;
+    z-index: 999;
 }
