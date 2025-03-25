@@ -156,3 +156,7 @@ button:hover {
     pointer-events: none;
     z-index: 999;
 }
+
+.questionnaire-page{
+    margin-top: 70px;
+}
