@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Marmelad&display=swap');
+
 .row {
     margin-top: 50px;
     margin-bottom: 50px;
 }
+
+
 
 /*
 .card {
@@ -13,7 +17,7 @@
 body {
     background-color: #f0f0f0;
     color: #333;
-    font-family: fantasy, sans-serif;
+    font-family: "Marmelad", sans-serif !important;
 }
 
 .col{
@@ -50,6 +54,7 @@ nav a:hover {
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin: 20px;
+    margin-bottom: 10px;
     padding: 20px;
 }
 
@@ -75,27 +80,27 @@ footer {
 }
 
 h1 {
-    color: #2E8B57; /* Changed to a darker green for better contrast */
+    color: #2E8B57;
 }
 
 h2 {
-    color: #2E8B57; /* Changed to a darker green for better contrast */
+    color: #2E8B57;
 }
 
 h3 {
-    color: #2E8B57; /* Changed to a darker green for better contrast */
+    color: #2E8B57;
 }
 
 h4 {
-    color: #2E8B57; /* Changed to a darker green for better contrast */
+    color: #2E8B57;
 }
 
 h5 {
-    color: #2E8B57; /* Changed to a darker green for better contrast */
+    color: #2E8B57;
 }
 
 h6 {
-    color: #2E8B57; /* Changed to a darker green for better contrast */
+    color: #2E8B57;
 }
 
 p {
@@ -121,7 +126,7 @@ button:hover {
     background-color: #45a049;
 }
 
-.table {
+/* .table {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
@@ -144,7 +149,7 @@ button:hover {
 
 .table tr:hover {
     background-color: #ddd;
-}
+} */
 
 .gradient-overlay {
     position: fixed;
