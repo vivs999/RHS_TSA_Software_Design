@@ -10,6 +10,21 @@ function submitForm() {
     // Add form submission logic here
 }
 
+let formData = {};
+
+function recordPage2Data() {
+    formData.name = document.getElementById('name').value;
+    formData.email = document.getElementById('email').value;
+    formData.age = document.getElementById('age').value;
+}
+
+function recordPage3Data() {
+    formData.dropdown1 = document.getElementById('dropdown1').value;
+    formData.textbox1 = document.getElementById('textbox1').value;
+}
+
+
+
 //add code that says that if there is no value for one of the options that it will give an alert and ask to fill it out.
 
 //can someone test code below
