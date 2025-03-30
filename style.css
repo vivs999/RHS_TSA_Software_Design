@@ -24,6 +24,12 @@ body {
     color:#2E8B57;
 }
 
+.form-label{
+    position:relative !important;
+    left:10px !important;
+    color:#2E8B57 !important;
+
+}
 header {
     background-color: #4CAF50;
     color: white;
@@ -67,6 +73,20 @@ nav a:hover {
 
 .card-body {
     padding: 10px;
+}
+
+.card-text{
+    font-size: 18px;
+}
+
+.card-title {
+    font-size: 26px;
+    font-weight: bold;
+} 
+
+.card-subheading{
+    font-size: 22px;
+    font-weight: bold;
 }
 
 footer {
