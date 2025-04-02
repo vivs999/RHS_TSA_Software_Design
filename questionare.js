@@ -8,22 +8,31 @@ function showPage(pageNumber) {
 }
 
 function submitForm() {
-    alert('Your responses have been submitted. Thank you!');
-    // Add form submission logic here
+    //alert('Your responses have been submitted. Thank you!');
+    formData.name = document.getElementById('name').value;
+    formData.email = document.getElementById('email').value;
+    formData.age = document.getElementById('age').value;
+    formData.cropType = document.getElementById('dropdown1').value;
+    formData.area = document.getElementById('areaSelect').value;
+    formData.volume = document.getElementById('volume').value;
+    formData.land = document.getElementById('land').value;
+    str = JSON.stringify(formData);
+    console.log(str); // Logs output to dev tools console.
+    //console.log(formData);
+    //window.location.href = 'results.html';
 }
 
 let formData = {};
 
-function recordPage2Data() {
-    formData.name = document.getElementById('name').value;
-    formData.email = document.getElementById('email').value;
-    formData.age = document.getElementById('age').value;
-}
+// function hidePage1(){
+//     document.getElementById('page-2').classList.add('d-none');
+//     document.getElementById('page-3').classList.remove('d-none');
+// }
 
-function recordPage3Data() {
-    formData.dropdown1 = document.getElementById('dropdown1').value;
-    formData.textbox1 = document.getElementById('textbox1').value;
-}
+// function hidePage2(){
+//     document.getElementById('page-3').classList.add('d-none');
+//     document.getElementById('page-4').classList.remove('d-none');
+// }
 
 
 

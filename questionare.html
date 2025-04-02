@@ -16,7 +16,7 @@
         <a class="navbar-brand" href="index.html" >
             <!--Add Image-->
             <img src="images/Logo.PNG" alt="RHS TSA Logo" width="30" height="30" class="d-inline-block align-text-top">
-            Farm Friendly - from Farm to Home!
+            Farm Friendly!
         </a>
         <button class="navbar-toggler btn-outline-danger" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -48,7 +48,7 @@
         </div>
 
         <div id="page-2" class="questionnaire-page d-none text-center">
-            <h2 class="display-3">Registration</h2>
+            <h2 class="display-3">Personal Information</h2>
             <form id="page-2-form" onsubmit="event.preventDefault(); showPage(3);">
                 <div class="container flex-column">
                     <div class="mb-3 mx-auto text-start" style="width: 80%;">
@@ -91,34 +91,89 @@
                     </div>
                     <div class="column justify-content-center">
                         <button class="btn btn-warning" style="margin:10px 15px; padding:1%; width:10%; min-width:fit-content;" type="button" onclick="showPage(1)">Back</button>
-                        <button class="btn btn-primary" style="margin:10px 15px; padding:1%; width:10%; min-width:fit-content;" type="submit">Next</button>
+                        <button class="btn btn-primary" style="margin:10px 15px; padding:1%; width:10%; min-width:fit-content;" type="submit" onclick="showPage(3)">Next</button>
                     </div>
                 </div>
                 
             </form>
         </div>
 
+
         <div id="page-3" class="questionnaire-page d-none text-center">
-            <h2>Additional Information</h2>
-            <form>
-                <div class="mb-3">
-                    <label for="dropdown1" class="form-label">Select an option</label>
-                    <select class="form-select" id="dropdown1">
-                        <option value="" selected disabled>Choose...</option>
-                        <option value="option1">Option 1</option>
-                        <option value="option2">Option 2</option>
-                        <option value="option3">Option 3</option>
-                    </select>
+            <h2 class="display-3">Farm Information</h2>
+            <form id="page-2-form" onsubmit="event.preventDefault(); showPage(4);">
+                <div class="container flex-column">
+                    <div class="mb-3 mx-auto text-start" style="width: 80%;">
+                        <div class="row" style="margin: 0%; padding: 0%;">
+                            <label for="name" class="form-label" style="font-size: 1.2rem; font-weight: bold;">Crop Type</label>
+                            <div class="col">
+                                <div class="mb-3">
+                                    <select class="form-select" id="dropdown1" required style="border: 2px solid #ced4da; border-radius: 10px; padding: 10px; font-size: 1rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                                        <option value="" selected disabled>Choose...</option>
+                                        <option value="Grain">Grain</option>
+                                        <option value="Horticulture">Horticulture</option>
+                                        <option value="Forage">Forage Crops</option>
+                                        <option value="Industrial">Industrial Crops</option>
+                                        <option valeu="Legume">Legume Crops</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3 mx-auto text-start" style="width: 80%;">
+                        <div class="row" style="margin: 0%; padding: 0%;">
+                            <label for="name" class="form-label" style="font-size: 1.2rem; font-weight: bold;">Location</label>
+                            <div class="col">
+                                <div class="mb-3">
+                                    <select class="form-select" id="areaSelect" required style="border: 2px solid #ced4da; border-radius: 10px; padding: 10px; font-size: 1rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                                        <option value="" selected disabled>Choose...</option>
+                                        <option value="Rural">Rural</option>
+                                        <option value="Suburban">Sub-urban</option>
+                                        <option value="Urban">Urban</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3 mx-auto text-start" style="width: 80%;">
+                        <div class="row" style="margin: 0%; padding: 0%;">
+                            <label for="address" class="form-label" style="font-size: 1.2rem; font-weight: bold;">Volume of Produce</label>
+                            <div class="col">
+                                <input type="number" class="form-control checker" id="volume" placeholder="Volume of Produce in lbs" required style="border: 2px solid #ced4da; border-radius: 10px; padding: 10px; font-size: 1rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3 mx-auto text-start" style="width: 80%;">
+                        <div class="row" style="margin: 0%; padding: 0%;">
+                            <label for="address" class="form-label" style="font-size: 1.2rem; font-weight: bold;">Ammount of Land</label>
+                            <div class="col">
+                                <input type="number" class="form-control checker" id="land" placeholder="Area of land in Acres" required style="border: 2px solid #ced4da; border-radius: 10px; padding: 10px; font-size: 1rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column justify-content-center">
+                        <button class="btn btn-warning" style="margin:10px 15px; padding:1%; width:10%; min-width:fit-content;" type="button" onclick="showPage(2)">Back</button>
+                        <button class="btn btn-primary" style="margin:10px 15px; padding:1%; width:10%; min-width:fit-content;" type="submit" onclick="showPage(4)">Next</button>
+                    </div>
                 </div>
-                <div class="mb-3">
-                    <label for="textbox1" class="form-label">Additional Comments</label>
-                    <textarea class="form-control" id="textbox1" rows="3" placeholder="Enter your comments"></textarea>
-                </div>
-                <button class="btn btn-primary" type="button" onclick="recordPage3Data(); showPage(4)">Next</button>
+                
             </form>
         </div>
 
         <div id="page-4" class="questionnaire-page d-none text-center">
+            <h2>Additional Comments/Feedback</h2>
+                <div class="mb-3">
+                    <label for="textbox1" class="form-label">Additional Comments</label>
+                    <textarea class="form-control" id="textbox1" rows="3" style = "width:80%;" placeholder="What can we do better?"></textarea>
+                </div>
+                <div class="column justify-content-center">
+                    <button class="btn btn-warning" style="margin:10px 15px; padding:1%; width:10%; min-width:fit-content;" type="button" onclick="showPage(3)">Back</button>
+                    <button class="btn btn-primary" style="margin:10px 15px; padding:1%; width:10%; min-width:fit-content;" type="submit" onclick="showPage(5)">Next</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="page-5" class="questionnaire-page d-none text-center">
             <h2>Submit</h2>
             <p>Thank you for completing the questionnaire. Please click the button below to submit your responses.</p>
             <button class="btn btn-success" onclick="submitForm()">Submit</button>
