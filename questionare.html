@@ -1,190 +1,103 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Questionnaire</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top">
-        <div class="container-fluid">
-        <!--Add HREF-->
-        <a class="navbar-brand" href="index.html" >
-            <!--Add Image-->
-            <img src="images/Logo.PNG" alt="RHS TSA Logo" width="30" height="30" class="d-inline-block align-text-top">
-            Farm Friendly!
-        </a>
-        <button class="navbar-toggler btn-outline-danger" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-                <!--Add HREF-->
-                <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-                <!--Add HREF-->
-                <a class="nav-link" href="questionare.html" style="color:white">Questionare</a>
-            </li>
-            <li class="nav-item">
-                <!--Add HREF-->
-                <a class="nav-link" href="results.html">Your Results</a>
-            </li>
-            </ul>
-        </div>
-        </div>
-    </nav>
-
-    <div class="container mt-5"></div>
-        <div id="page-1" class="questionnaire-page text-center justify-content-center" style="margin:5%; padding:10%; position:relative; top:0%;">
-            <h1 style="margin:5%" class="display-2">Welcome to the Questionnaire</h1>
-            <p style="margin:5%; font-size: 26px;" class="">Please answer this questionare. This will help us determine what form of distribution and transportation you should be using for your agricultural products.</p>
-            <button style= "font-size:18px; width:35%; padding:1.5%"class="btn btn-outline-primary" onclick="showPage(2)">Start</button>
-        </div>
-
-        <div id="page-2" class="questionnaire-page d-none text-center">
-            <h2 class="display-3">Personal Information</h2>
-            <form id="page-2-form" onsubmit="event.preventDefault(); showPage(3);">
-                <div class="container flex-column">
-                    <div class="mb-3 mx-auto text-start" style="width: 80%;">
-                        <div class="row" style="margin: 0%; padding: 0%;">
-                            <label for="name" class="form-label" style="font-size: 1.2rem; font-weight: bold;">Name</label>
-                            <div class="col">
-                                <input type="text" class="form-control checker" id="name" placeholder="First Name" style="border: 2px solid #ced4da; border-radius: 10px; padding: 10px; font-size: 1rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-                            </div>
-                            <div class="col">
-                                <input type="text" class="form-control checker" id="name" placeholder="Last Name" style="border: 2px solid #ced4da; border-radius: 10px; padding: 10px; font-size: 1rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mb-3 mx-auto text-start" style="width: 80%;">
-                        <div class="row" style="margin: 0%; padding: 0%;">
-                            <label for="address" class="form-label" style="font-size: 1.2rem; font-weight: bold;">Address</label>
-                            <div class="col">
-                                <input type="text" class="form-control checker" id="Streetaddress" placeholder="Street Address" style="border: 2px solid #ced4da; border-radius: 10px; padding: 10px; font-size: 1rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-                            </div>
-                            <div class="col">
-                                <input type="text" class="form-control checker" id="zip" placeholder="City, State, Zip Code" style="border: 2px solid #ced4da; border-radius: 10px; padding: 10px; font-size: 1rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mb-3 mx-auto text-start" style="width: 80%;">
-                        <div class="row" style="margin:0%; padding:0%">
-                            <label for="email" class="form-label" style="font-size: 1.2rem; font-weight: bold;">Email</label>
-                            <div class="col">
-                                <input type="email" class="form-control checker" id="email" placeholder="Enter your email" style="border: 2px solid #ced4da; border-radius: 10px; padding: 10px; font-size: 1rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mb-3 mx-auto text-start" style="width: 80%;">
-                        <div class="row" style="margin:0%; padding:0%">
-                            <label for="age" class="form-label" style="font-size: 1.2rem; font-weight: bold;">Age</label>
-                            <div class="col">
-                                <input type="number" class="form-control checker" id="age" placeholder="Enter your age" style="border: 2px solid #ced4da; border-radius: 10px; padding: 10px; font-size: 1rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column justify-content-center">
-                        <button class="btn btn-warning" style="margin:10px 15px; padding:1%; width:10%; min-width:fit-content;" type="button" onclick="showPage(1)">Back</button>
-                        <button class="btn btn-primary" style="margin:10px 15px; padding:1%; width:10%; min-width:fit-content;" type="submit" onclick="">Next</button>
-                    </div>
-                </div>
-                
-            </form>
-        </div>
-
-
-        <div id="page-3" class="questionnaire-page d-none text-center">
-            <h2 class="display-3">Farm Information</h2>
-            <form id="page-2-form" onsubmit="event.preventDefault(); showPage(4);">
-                <div class="container flex-column">
-                    <div class="mb-3 mx-auto text-start" style="width: 80%;">
-                        <div class="row" style="margin: 0%; padding: 0%;">
-                            <label for="name" class="form-label" style="font-size: 1.2rem; font-weight: bold;">Crop Type</label>
-                            <div class="col">
-                                <div class="mb-3">
-                                    <select class="form-select" id="dropdown1" required style="border: 2px solid #ced4da; border-radius: 10px; padding: 10px; font-size: 1rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-                                        <option value="" selected disabled>Choose...</option>
-                                        <option value="Grain">Grain</option>
-                                        <option value="Horticulture">Horticulture</option>
-                                        <option value="Forage">Forage Crops</option>
-                                        <option value="Industrial">Industrial Crops</option>
-
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mb-3 mx-auto text-start" style="width: 80%;">
-                        <div class="row" style="margin: 0%; padding: 0%;">
-                            <label for="name" class="form-label" style="font-size: 1.2rem; font-weight: bold;">Location</label>
-                            <div class="col">
-                                <div class="mb-3">
-                                    <select class="form-select" id="areaSelect" required style="border: 2px solid #ced4da; border-radius: 10px; padding: 10px; font-size: 1rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-                                        <option value="" selected disabled>Choose...</option>
-                                        <option value="Rural">Rural</option>
-                                        <option value="Suburban">Sub-urban</option>
-                                        <option value="Urban">Urban</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mb-3 mx-auto text-start" style="width: 80%;">
-                        <div class="row" style="margin: 0%; padding: 0%;">
-                            <label for="address" class="form-label" style="font-size: 1.2rem; font-weight: bold;">Volume of Produce</label>
-                            <div class="col">
-                                <input type="number" class="form-control checker" id="volume" placeholder="Volume of Produce in lbs" required style="border: 2px solid #ced4da; border-radius: 10px; padding: 10px; font-size: 1rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mb-3 mx-auto text-start" style="width: 80%;">
-                        <div class="row" style="margin: 0%; padding: 0%;">
-                            <label for="address" class="form-label" style="font-size: 1.2rem; font-weight: bold;">Ammount of Land</label>
-                            <div class="col">
-                                <input type="number" class="form-control checker" id="land" placeholder="Area of land in Acres" required style="border: 2px solid #ced4da; border-radius: 10px; padding: 10px; font-size: 1rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column justify-content-center">
-                        <button class="btn btn-warning" style="margin: 10px 15px; padding:1%; width:10%; min-width:fit-content;" type="button" onclick="showPage(2)">Back</button>
-                        <button class="btn btn-primary" style="margin:10px 15px; padding:1%; width:10%; min-width:fit-content;" type="submit" onclick="">Next</button>
-                    </div>
-                </div>
-                
-            </form>
-        </div>
-
-        <div id="page-4" class="questionnaire-page d-none text-center justify-content-center">
-            <h2>Additional Comments/Feedback</h2>
-                <div class="mb-3 justify-content-center">
-                    <label for="textbox1" class="form-label">Additional Comments</label>
-                    <textarea class="form-control justify-content-center" id="textbox1" rows="3" style = "width:80%; position:center; margin:0 auto;" placeholder="What can we do better?"></textarea>
-                </div>
-                <div class="column justify-content-center">
-                    <button class="btn btn-warning" style="margin:10px 15px; padding:1%; width:10%; min-width:fit-content;" type="button" onclick="showPage(3)">Back</button>
-                    <button class="btn btn-primary" style="margin:10px 15px; padding:1%; width:10%; min-width:fit-content;" type="submit" onclick="showPage(5)">Next</button>
-                </div>
-            </form>
-        </div>
-
-        <div id="page-5" class="questionnaire-page d-none text-center">
-            <h2>Submit</h2>
-            <p>Thank you for completing the questionnaire. Please click the button below to submit your responses.</p>
-            <button class="btn btn-success" onclick="submitForm()">Submit</button>
-        </div>
-    </div>
-
+function showPage(pageNumber) {
     
-    <!-- Bootstrap JS Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JS -->
-    <script src="questionare.js"></script>
-    <script src="main.js"></script>
-</body>
-</html>
+    document.querySelectorAll('.questionnaire-page').forEach(page => {
+        page.classList.add('d-none');
+    });
+    document.getElementById(`page-${pageNumber}`).classList.remove('d-none');
+    
+}
+
+function submitForm() {
+    //alert('Your responses have been submitted. Thank you!');
+    formData.name = document.getElementById('name').value;
+    formData.email = document.getElementById('email').value;
+    formData.age = document.getElementById('age').value;
+    formData.cropType = document.getElementById('dropdown1').value;
+    formData.area = document.getElementById('areaSelect').value;
+    formData.volume = document.getElementById('volume').value;
+    formData.land = document.getElementById('land').value;
+    str = JSON.stringify(formData);
+    console.log(str); // Logs output to dev tools console.
+    //console.log(formData);
+    window.location.href = 'results.html';
+}
+
+let formData = {};
+consumer = 0;
+distributor = 0;
+market = 0;
+function determineMethod() {
+    
+    //crop type
+    if (cropType == "Grain" || cropType == "Industrial") {
+        distributor++;
+    } else if (cropType == "Horticulture") {
+        market++;
+    } else if (cropType == "Forage") {
+        consumer++;
+    }
+    
+    //location of farm
+    if (area == "rural") {
+        distributor++;
+    } else if (area == "suburban") {
+        market++;
+    } else if (area == "urban") {
+        consumer++;
+    }
+    
+    //volume of crops
+    if (volume < 100) {
+        consumer++;
+    } else if (volume >= 100 && volume < 10000) {
+        market++;
+    } else {
+        distributor++;
+    }
+
+    //land area of farm
+    if (land < 2) {
+        consumer++;
+    } else if (land >= 2 && land < 10) {
+        market++;
+    } else {
+        distributor++;
+    }
+}
+
+// function hidePage1(){
+//     document.getElementById('page-2').classList.add('d-none');
+//     document.getElementById('page-3').classList.remove('d-none');
+// }
+
+// function hidePage2(){
+//     document.getElementById('page-3').classList.add('d-none');
+//     document.getElementById('page-4').classList.remove('d-none');
+// }
+
+
+
+//add code that says that if there is no value for one of the options that it will give an alert and ask to fill it out.
+
+//can someone test code below
+
+
+function validatePage(pageNumber) {
+    const currentPage = document.getElementById(`page-${pageNumber}`);
+    const inputs = currentPage.querySelectorAll('input, select, textarea');
+    for (let input of inputs) {
+        if (!input.value.trim()) {
+            return false;
+        }
+    }
+    return true;
+}
+
+document.querySelectorAll('.next-button').forEach((button, index) => {
+    button.addEventListener('click', () => {
+        const currentPageNumber = index + 1;
+        if (validatePage(currentPageNumber)) {
+            showPage(currentPageNumber + 1);
+        }
+    });
+});
