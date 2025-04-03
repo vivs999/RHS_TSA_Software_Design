@@ -18,6 +18,7 @@ body {
     background-color:#f7f7f7 !important;
     color: #333;
     font-family: "Marmelad", sans-serif !important;
+    scroll-behavior: smooth;
 
 }
 
@@ -60,7 +61,7 @@ nav a:hover {
 }
 
 .card {
-    background-color: black;
+    background-color: white;
     border: 1px solid #ddd;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -189,4 +190,8 @@ button:hover {
 
 .questionnaire-page{
     margin-top: 70px;
+}
+
+th{
+    font-weight: bolder;
 }
