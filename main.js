@@ -60,7 +60,7 @@ function submitForm() {
     } else {
         distributor++;
     }
-   
+   maximum = Math.max(consumer, distributor, localMarket);
     if (maximum == distributor) {
         window.location.href = 'distributor.html';
     } else if (maximum == consumer) {
