@@ -23,5 +23,5 @@ function submitForm() {
     str = JSON.stringify(formData);
     console.log(str); // Logs output to dev tools console.
     //console.log(formData);
-    window.location.href = 'results.html';
+    window.location.href = 'results.html';                  
 }
